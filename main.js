@@ -1,1 +1,1 @@
-guessNumber();
+start();
