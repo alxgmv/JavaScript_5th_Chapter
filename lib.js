@@ -44,8 +44,8 @@ window.guessNumber = function() {
 			guessNumber();
 		}
 	} else {
-		let y = confirm('Maximumn attempts exceed, one more time?');
-		if (y) {
+		let reset = confirm('Maximumn attempts exceed, one more time?');
+		if (reset) {
 			attempt = counter();
 			randomNumber();
 			guessNumber();
