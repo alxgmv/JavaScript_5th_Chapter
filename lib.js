@@ -1,4 +1,4 @@
-let start = function() {
+let bar = (function start() {
 	let x = 0;
 	function randomNumber() {
 		x = Math.floor((Math.random() * 1000) + 1);
@@ -51,6 +51,7 @@ let start = function() {
 			};
 		};
 	};
-}
-window.bar = start();
+	window.bar = start();
+})()
+
 // bar();
