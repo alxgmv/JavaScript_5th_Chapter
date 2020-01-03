@@ -1,4 +1,4 @@
-function start() {
+let start = function() {
 	let x = 0;
 	function randomNumber() {
 		x = Math.floor((Math.random() * 1000) + 1);
@@ -9,8 +9,8 @@ function start() {
 	let currentAttempt = 1;
 		return function() {
 			return currentAttempt++;
-		}
-	}
+		};
+	};
 	let attempt = counter();
 	return function guessNumber() {
 		// console.log(attempt()-1);
@@ -26,20 +26,20 @@ function start() {
 						guessNumber();
 					} else {
 						alert('Canceled');
-					}
+					};
 				} else if (+num > x) {
 					alert('Your number is too big');
 					guessNumber();
 				} else {
 					alert('Your number is too small');
 					guessNumber();
-				}
+				};
 			} else if (num === null) {
 				alert('Canceled');
 			} else {
 				alert('Enter valid number!');
 				guessNumber();
-			}
+			};
 		} else {
 			let reset = confirm('Maximumn attempts exceed, one more time?');
 			if (reset) {
@@ -48,8 +48,9 @@ function start() {
 				guessNumber();
 			} else {
 				alert('Cancelled');
-			}
-		}
-	}
+			};
+		};
+	};
 }
 window.bar = start();
+// bar();
